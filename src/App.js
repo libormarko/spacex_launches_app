@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { FILTERS_YEARS, FILTERS_LAUNCH, FILTERS_LANDING } from './constants/filters';
 import Checkbox from './components/checkbox';
-import LaunchedResult from './components/launchedResult';
+import LaunchedResults from './components/launchedResults';
 import {
   PATH_BASE,
   PATH_SEARCH,
@@ -80,21 +80,9 @@ class AppContainer extends React.Component {
             ))
           }
         </div>
-        <div className="results__container">
-          {
-            this.state.results && this.state.results.map(result => 
-              <LaunchedResult
-                key={result.launch_date_unix}
-                missionPatch = {result.links.mission_patch_small}
-                missionName={result.mission_name}
-                missionId={result.mission_id}
-                launchYear={result.launch_year} 
-                launchSuccess={result.launch_success}
-                landSuccess={result.rocket.first_stage.cores[0].land_success}
-              />
-            )
-          }
-        </div>
+        <LaunchedResults 
+          results={this.state.results}
+        />
       </div>
     )
   }
