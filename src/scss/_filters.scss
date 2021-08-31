@@ -1,0 +1,13 @@
+.filters__container {
+    width: 10vw;
+    .filter__item {
+        width: 50%;
+        display: inline-block;
+        label {
+            background-color: #008000;
+            margin: 1rem 0;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+}

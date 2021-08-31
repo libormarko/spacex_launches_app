@@ -1,0 +1,12 @@
+.results__container {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &--item {
+        width: 30%;
+        background-color: #fff;
+        margin-bottom: 1rem;
+        height: 31rem;
+    }
+}
