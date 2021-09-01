@@ -1,9 +1,9 @@
-.results__container {
+.launches__container {
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    &--item {
+    & &--item {
         width: 30%;
         background-color: #fff;
         margin-bottom: 1rem;
