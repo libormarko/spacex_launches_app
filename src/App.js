@@ -53,13 +53,16 @@ class AppContainer extends React.Component {
 
   render() {
     return (
-      <div className="app__container">
-        <Filters 
-          onInputChange = {this.handleCallback}
-        />
-        <Launches
-          results={this.state.results}
-        />
+      <div className="app">
+        <h4 className="app__headline">SpaceX Launch Programs</h4>
+        <div className="app__container">
+          <Filters
+            onInputChange={this.handleCallback}
+          />
+          <Launches
+            results={this.state.results}
+          />
+        </div>
       </div>
     )
   }

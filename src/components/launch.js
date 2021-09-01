@@ -1,6 +1,8 @@
 const Launch = ({ missionPatch, missionName, missionId, launchYear, launchSuccess, landSuccess }) => (
     <div className="launches__container--item">
-        <img className="item--img" src={missionPatch} alt=""/>
+        <div className="item--img-container">
+            <img className="item--img" src={missionPatch} alt="Mission_patch"/>
+        </div>
         <h5>{missionName}</h5>
         <div className="item--container">
             <h6>Mission Ids:</h6>

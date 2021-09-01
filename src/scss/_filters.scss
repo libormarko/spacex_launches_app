@@ -1,16 +1,49 @@
 .filters__container {
-    width: 10vw;
+    width: auto;
+    @include bp-min(md) {
+        width: 200px;
+    }
+    background-color: #fff;
+    height: fit-content;
+    padding: 16px;
     .filter__item {
-        width: 50%;
-        display: inline-block;
+        width: 33%;
+        @include bp-min(md) {
+            width: 50%;
+        }
+        display: flex;
+        justify-content: center;
         label {
-            background-color: #008000;
-            margin: 1rem 0;
+            margin: 10px 0px;
             display: inline-block;
             cursor: pointer;
+            padding: 16px 25px;
+            border-radius: 24px;
+            span {
+
+            }
         }
     }
+    & &--headline {
+        margin-top: 0px;
+    }
     & &--subheadline {
-        display: block;
+        text-decoration: underline;
+        width: 100%;
+        text-align: center;
+    }
+    & &--years {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    & &--launch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    & &--landing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

@@ -16,7 +16,7 @@ class Filters extends React.Component {
     render() {
         return (
             <div className="filters__container">
-                <span className="filters__container--headline">Filters</span>
+                <h6 className="filters__container--headline">Filters:</h6>
                 <div className="filters__container--years">
                     <h6 className="filters__container--subheadline">Launch Year</h6>
                     {
@@ -35,14 +35,16 @@ class Filters extends React.Component {
                                 <label
                                     htmlFor={item.id}
                                 >
-                                    {item.label}
+                                    <span>
+                                        {item.label}
+                                    </span>
                                 </label>
                             </span>
                         ))
                     }
                 </div>
                 <div className="filters__container--launch">
-                    <span className="filters__container--subheadline">Succesful launch</span>
+                    <h6 className="filters__container--subheadline">Succesful launch</h6>
                     {
                         FILTERS_LAUNCH.map(item => (
                             <span
@@ -59,14 +61,16 @@ class Filters extends React.Component {
                                 <label
                                     htmlFor={item.id}
                                 >
-                                    {item.label}
+                                    <span>
+                                        {item.label}
+                                    </span>
                                 </label>
                             </span>
                         ))
                     }
                 </div>
                 <div className="filters__container--landing">
-                    <span className="filters__container--subheadline">Succesful landing</span>
+                    <h6 className="filters__container--subheadline">Succesful landing</h6>
                     {
                         FILTERS_LANDING.map(item => (
                             <span
@@ -83,7 +87,9 @@ class Filters extends React.Component {
                                 <label
                                     htmlFor={item.id}
                                 >
-                                    {item.label}
+                                    <span>
+                                        {item.label}
+                                    </span>
                                 </label>
                             </span>
                         ))
