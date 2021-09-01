@@ -14,73 +14,119 @@ class AppContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      checkedItems: new Map(),
+      checkedYear: null,
+      checkedLaunch: null,
+      checkedLanding: null,
       results: null,
       error: null,
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.fetchRequestedLaunches = this.fetchRequestedLaunches.bind(this);
-    this.updateRequestedLaunches = this.updateRequestedLaunches.bind(this);
   }
 
   handleChange(e) {
-    let item = e.target.name;
-    let isChecked = e.target.checked;
-    this.setState(prevState => ({
-      checkedItems: prevState.checkedItems.set(item, isChecked)
-    }));
+    let item = e.target.id;
+    let value = e.target.value;
+    e.target.name === "filterYear" && this.setState({ checkedYear: item }, () => this.fetchRequestedLaunches());
+    e.target.name === "filterLaunch" && this.setState({ checkedLaunch: value }, () => this.fetchRequestedLaunches());
+    e.target.name === "filterLanding" && this.setState({ checkedLanding: value }, () => this.fetchRequestedLaunches());
   };
 
   fetchRequestedLaunches() {
-    axios(`${PATH_BASE}${PATH_SEARCH}${PARAM_LIMIT}`)
-        .then(result => this.setState({ results: result.data }))
-        .catch(error => this.setState({ error }));
-  };
-
-  updateRequestedLaunches(data) {
-    console.log(data);
+    let url = `${PATH_BASE}${PATH_SEARCH}${PARAM_LIMIT}`;
+    if (this.state.checkedYear) {
+      url += `&launch_year=${this.state.checkedYear}`;
+    }
+    if (this.state.checkedLaunch) {
+      url += `&launch_success=${this.state.checkedLaunch}`;
+    }
+    if (this.state.checkedLanding) {
+      url += `&land_success=${this.state.checkedLanding}`;
+    }
+    axios(url)
+      .then(result => this.setState({ results: result.data }))
+      .catch(error => this.setState({ error }));
   };
 
   componentDidMount() {
     this.fetchRequestedLaunches();
   };
 
-  componentDidUpdate() {
-    let sortedMap = new Map([...this.state.checkedItems.entries()].sort().reverse());
-    sortedMap.forEach((value, key) => {
-      if (value === true) {
-        console.log(key)
-      }
-    })
-  };
-
   render() {
     return (
       <div className="app__container">
         <div className="filters__container">
-          {
-            FILTERS_YEARS.map(item => (
-              <span
-                key={item.id}
-                className="filter__item"
-              >
-                <Checkbox
-                  id={item.name}
-                  name={item.name}
-                  checked={this.state.checkedItems.get(item.name)}
-                  onChange={this.handleChange}
-                />
-                <label
-                  htmlFor={item.name}
+          <div className="filters__container--years">
+            {
+              FILTERS_YEARS.map(item => (
+                <span
+                  key={item.id}
+                  className="filter__item"
                 >
-                  {item.label}
-                </label>
-              </span>
-            ))
-          }
+                  <Checkbox
+                    id={item.label}
+                    name={item.name}
+                    //checked={this.state.checkedItems.get(item.name)}
+                    onChange={this.handleChange}
+                  />
+                  <label
+                    htmlFor={item.label}
+                  >
+                    {item.label}
+                  </label>
+                </span>
+              ))
+            }
+          </div>
+          <div className="filters__container--launch">
+            {
+              FILTERS_LAUNCH.map(item => (
+                <span
+                  key={item.id}
+                  className="filter__item"
+                >
+                  <Checkbox
+                    id={item.id}
+                    name={item.name}
+                    value={item.value}
+                    //checked={this.state.checkedItems.get(item.name)}
+                    onChange={this.handleChange}
+                  />
+                  <label
+                    htmlFor={item.id}
+                  >
+                    {item.label}
+                  </label>
+                </span>
+              ))
+            }
+          </div>
+          <div className="filters__container--landing">
+            {
+              FILTERS_LANDING.map(item => (
+                <span
+                  key={item.id}
+                  className="filter__item"
+                >
+                  <Checkbox
+                    id={item.id}
+                    name={item.name}
+                    value={item.value}
+                    //checked={this.state.checkedItems.get(item.name)}
+                    onChange={this.handleChange}
+                  />
+                  <label
+                    htmlFor={item.id}
+                  >
+                    {item.label}
+                  </label>
+                </span>
+              ))
+            }
+          </div>
         </div>
-        <LaunchedResults 
+        <LaunchedResults
           results={this.state.results}
         />
       </div>

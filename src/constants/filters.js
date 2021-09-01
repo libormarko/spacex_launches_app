@@ -1,104 +1,108 @@
 const FILTERS_YEARS = [
     {
         id: '06',
-        name: 'checkbox-2006',
+        name: 'filterYear',
         label: '2006',
     },
     {   
         id: '07',
-        name: 'checkbox-2007',
+        name: 'filterYear',
         label: '2007',
     },
     {   
         id: '08',
-        name: 'checkbox-2008',
+        name: 'filterYear',
         label: '2008',
     },
     {
         id: '09',
-        name: 'checkbox-2009',
+        name: 'filterYear',
         label: '2009',
     },
     {
         id: '10',
-        name: 'checkbox-2010',
+        name: 'filterYear',
         label: '2010',
     },
     {
         id: '11',
-        name: 'checkbox-2011',
+        name: 'filterYear',
         label: '2011',
     },
     {
         id: '12',
-        name: 'checkbox-2012',
+        name: 'filterYear',
         label: '2012',
     },
     {
         id: '13',
-        name: 'checkbox-2013',
+        name: 'filterYear',
         label: '2013',
     },
     {
         id: '14',
-        name: 'checkbox-2014',
+        name: 'filterYear',
         label: '2014',
     },
     {
         id: '15',
-        name: 'checkbox-2015',
+        name: 'filterYear',
         label: '2015',
     },
     {
         id: '16',
-        name: 'checkbox-2016',
+        name: 'filterYear',
         label: '2016',
     },
     {
         id: '17',
-        name: 'checkbox-2017',
+        name: 'filterYear',
         label: '2017',
     },
     {
         id: '18',
-        name: 'checkbox-2018',
+        name: 'filterYear',
         label: '2018',
     },
     {
         id: '19',
-        name: 'checkbox-2019',
+        name: 'filterYear',
         label: '2019',
     },
     {
         id: '20',
-        name: 'checkbox-2020',
+        name: 'filterYear',
         label: '2020',
     },
 ];
 
 const FILTERS_LAUNCH = [
     {
-        id: '01',
-        name: 'launch-success',
+        id: 'launch-success',
+        name: 'filterLaunch',
         label: 'true',
+        value: 'true',
     },
     {
-        id: '02',
-        name: 'launch-fail',
+        id: 'launch-fail',
+        name: 'filterLaunch',
         label: 'false',
+        value: 'false',
     },
 ]
 
 const FILTERS_LANDING = [
     {
-        id: '01',
-        name: 'landing-success',
+        id: 'landing-success',
+        name: 'filterLanding',
         label: 'true',
+        value: 'true',
     },
     {
-        id: '02',
-        name: 'landing-fail',
+        id: 'landing-fail',
+        name: 'filterLanding',
         label: 'false',
+        value: 'false',
     },
 ]
 
