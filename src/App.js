@@ -61,6 +61,7 @@ class AppContainer extends React.Component {
     const {
       results,
       isLoading,
+      error,
     } = this.state;
 
     return (
@@ -70,10 +71,15 @@ class AppContainer extends React.Component {
           <Filters
             onInputChange={this.handleCallback}
           />
-          <LaunchesWithLoading
-            isLoading={isLoading}
-            results={results}
-          />
+          {error 
+            ? <div className="error-status">
+                Oops, something went wrong...
+              </div>
+            : <LaunchesWithLoading
+                isLoading={isLoading}
+                results={results}
+              />
+          }
         </div>
       </div>
     )
