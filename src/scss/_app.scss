@@ -88,3 +88,21 @@ input[type="radio"]:not(:checked) + label {
 input[type="radio"]:checked + label {
   background-color: #3fb14ee8;
 }
+
+.error-status {
+  width: auto;
+  margin-top: 10px;
+  @include bp-min(md) {
+    width: calc(100% - 250px);
+    margin-top: 0px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.signature {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

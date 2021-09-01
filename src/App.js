@@ -5,7 +5,6 @@ import {
   PATH_SEARCH,
   PARAM_LIMIT,
 } from './constants/api-endpoint';
-import Launches from './components/launches';
 import Filters from './components/filters';
 import LaunchesWithLoading from './components/withLoading';
 import axios from 'axios';
@@ -67,6 +66,7 @@ class AppContainer extends React.Component {
     return (
       <div className="app">
         <h4 className="app__headline">SpaceX Launch Programs</h4>
+        <div className="signature"><strong>Developed by:</strong> Libor Marko</div>
         <div className="app__container">
           <Filters
             onInputChange={this.handleCallback}

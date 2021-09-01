@@ -1,4 +1,5 @@
 import Launch from './launch';
+import PropTypes from 'prop-types';
 
 const Launches = ({ results }) => (
     <div className="launches__container">
@@ -18,5 +19,9 @@ const Launches = ({ results }) => (
           }
     </div>
 );
+
+Launches.propTypes = {
+    results: PropTypes.array,
+};
 
 export default Launches;

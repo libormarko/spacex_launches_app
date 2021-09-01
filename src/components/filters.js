@@ -1,5 +1,6 @@
 import React from 'react';
 import { FILTERS_YEARS, FILTERS_LAUNCH, FILTERS_LANDING } from '../constants/filters';
+import PropTypes from 'prop-types';
 
 class Filters extends React.Component {
     constructor(props) {
@@ -99,5 +100,9 @@ class Filters extends React.Component {
         )
     }
 }
+
+Filters.propTypes = {
+    onInputChange: PropTypes.func.isRequired
+};
 
 export default Filters;
