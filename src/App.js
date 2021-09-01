@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.scss';
-import { FILTERS_YEARS, FILTERS_LAUNCH, FILTERS_LANDING } from './constants/filters';
-import Checkbox from './components/checkbox';
 import LaunchedResults from './components/launchedResults';
+import Filters from './components/filters';
 import {
   PATH_BASE,
   PATH_SEARCH,
@@ -21,11 +20,11 @@ class AppContainer extends React.Component {
       error: null,
     }
 
-    this.handleChange = this.handleChange.bind(this);
+    this.handleCallback = this.handleCallback.bind(this);
     this.fetchRequestedLaunches = this.fetchRequestedLaunches.bind(this);
   }
 
-  handleChange(e) {
+  handleCallback(e) {
     let item = e.target.id;
     let value = e.target.value;
     e.target.name === "filterYear" && this.setState({ checkedYear: item }, () => this.fetchRequestedLaunches());
@@ -56,76 +55,9 @@ class AppContainer extends React.Component {
   render() {
     return (
       <div className="app__container">
-        <div className="filters__container">
-          <div className="filters__container--years">
-            {
-              FILTERS_YEARS.map(item => (
-                <span
-                  key={item.id}
-                  className="filter__item"
-                >
-                  <Checkbox
-                    id={item.label}
-                    name={item.name}
-                    //checked={this.state.checkedItems.get(item.name)}
-                    onChange={this.handleChange}
-                  />
-                  <label
-                    htmlFor={item.label}
-                  >
-                    {item.label}
-                  </label>
-                </span>
-              ))
-            }
-          </div>
-          <div className="filters__container--launch">
-            {
-              FILTERS_LAUNCH.map(item => (
-                <span
-                  key={item.id}
-                  className="filter__item"
-                >
-                  <Checkbox
-                    id={item.id}
-                    name={item.name}
-                    value={item.value}
-                    //checked={this.state.checkedItems.get(item.name)}
-                    onChange={this.handleChange}
-                  />
-                  <label
-                    htmlFor={item.id}
-                  >
-                    {item.label}
-                  </label>
-                </span>
-              ))
-            }
-          </div>
-          <div className="filters__container--landing">
-            {
-              FILTERS_LANDING.map(item => (
-                <span
-                  key={item.id}
-                  className="filter__item"
-                >
-                  <Checkbox
-                    id={item.id}
-                    name={item.name}
-                    value={item.value}
-                    //checked={this.state.checkedItems.get(item.name)}
-                    onChange={this.handleChange}
-                  />
-                  <label
-                    htmlFor={item.id}
-                  >
-                    {item.label}
-                  </label>
-                </span>
-              ))
-            }
-          </div>
-        </div>
+        <Filters 
+          parentCallback = {this.handleCallback}
+        />
         <LaunchedResults
           results={this.state.results}
         />
