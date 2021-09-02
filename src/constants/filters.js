@@ -5,13 +5,13 @@ const FILTERS_YEARS = [
         label: '2006',
         value: '2006',
     },
-    {   
+    {
         id: '07',
         name: 'filterYear',
         label: '2007',
         value: '2007',
     },
-    {   
+    {
         id: '08',
         name: 'filterYear',
         label: '2008',

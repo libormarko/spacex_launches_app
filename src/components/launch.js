@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 const LaunchCard = ({ missionPatch, missionName, missionId, launchYear, launchSuccess, landSuccess }) => (
     <div className="launches__container--item">
         <div className="item--img-container">
-            <img className="item--img" src={missionPatch} alt="Mission_patch"/>
+            <img className="item--img" src={missionPatch} alt="Mission_patch" />
         </div>
         <h5>{missionName}</h5>
         <div className="item--container">
             <h6>Mission Ids:</h6>
-            <span>{missionId.length === 0 ? "no IDs available" : missionId.map((item,index) => <li key={index}>{item}</li>)}</span>
+            <span>{missionId.length === 0 ? "no IDs available" : missionId.map((item, index) => <li key={index}>{item}</li>)}</span>
         </div>
         <div className="item--container">
             <h6>Launch Year:</h6>
