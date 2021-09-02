@@ -4,7 +4,7 @@ import {
     PATH_BASE,
     PATH_SEARCH,
     PARAM_LIMIT,
-} from './constants/api-endpoint';
+} from './constants/api-endpoint.js';
 import Filters from './components/filters';
 import LaunchesWithLoading from './components/withLoading';
 import axios from 'axios';
