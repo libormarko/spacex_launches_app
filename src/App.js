@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
+import Filters from './components/filters';
 import {
     PATH_BASE,
     PATH_SEARCH,
     PARAM_LIMIT,
-} from './constants/api-endpoint.js';
-import Filters from './components/filters';
+} from './constants/api-endpoint';
 import LaunchesWithLoading from './components/withLoading';
 import axios from 'axios';
 
