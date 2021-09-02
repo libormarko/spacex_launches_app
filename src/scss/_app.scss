@@ -82,11 +82,14 @@ input[type="radio"] {
 }
 
 input[type="radio"]:not(:checked) + label {
-  background-color: #bafd93;
+  background-color: #87e9fa;
 }
 
 input[type="radio"]:checked + label {
-  background-color: #3fb14ee8;
+  background-color: #2f86b8e8;
+  span {
+    color: #fff;
+  }
 }
 
 .error-status {
@@ -105,4 +108,17 @@ input[type="radio"]:checked + label {
 .signature {
   margin-top: 5px;
   margin-bottom: 10px;
+}
+
+.no-results-status {
+  width: auto;
+  margin-top: 10px;
+  @include bp-min(md) {
+    width: calc(100% - 250px);
+    margin-top: 0px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }

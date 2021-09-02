@@ -1,10 +1,12 @@
 .filters__container {
     width: auto;
+    height: 40vh;
+    overflow: scroll;
     @include bp-min(md) {
         width: 200px;
+        height: fit-content;
     }
     background-color: #fff;
-    height: fit-content;
     padding: 16px;
     .filter__item {
         width: 33%;
