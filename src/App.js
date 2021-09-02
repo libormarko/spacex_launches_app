@@ -5,7 +5,7 @@ import {
     PATH_BASE,
     PATH_SEARCH,
     PARAM_LIMIT,
-} from './constants/api-endpoint';
+} from './constants/API-endpoint';
 import LaunchesWithLoading from './components/withLoading';
 import axios from 'axios';
 
