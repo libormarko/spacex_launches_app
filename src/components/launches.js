@@ -1,4 +1,4 @@
-import Launch from './launch';
+import LaunchCard from './launch';
 import PropTypes from 'prop-types';
 
 const Launches = ({ results }) => (
@@ -7,7 +7,7 @@ const Launches = ({ results }) => (
             results && results.length === 0 
                 ?   <div className="no-results-status">There are no launches for your criteria...</div>
                 :   results && results.map(result => 
-                        <Launch
+                        <LaunchCard
                             key={`${result.mission_name}-${result.launch_date_unix.toString()}`.replace(/\s+/g, '')}
                             launchDateUnix={result.launch_date_unix}
                             missionPatch={result.links.mission_patch_small}

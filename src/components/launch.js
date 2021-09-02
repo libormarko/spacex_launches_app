@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Launch = ({ missionPatch, missionName, missionId, launchYear, launchSuccess, landSuccess }) => (
+const LaunchCard = ({ missionPatch, missionName, missionId, launchYear, launchSuccess, landSuccess }) => (
     <div className="launches__container--item">
         <div className="item--img-container">
             <img className="item--img" src={missionPatch} alt="Mission_patch"/>
@@ -25,7 +25,7 @@ const Launch = ({ missionPatch, missionName, missionId, launchYear, launchSucces
     </div>
 );
 
-Launch.propTypes = {
+LaunchCard.propTypes = {
     missionPatch: PropTypes.string,
     missionName: PropTypes.string,
     missionId: PropTypes.array,
@@ -37,4 +37,4 @@ Launch.propTypes = {
     ])
 };
 
-export default Launch;
+export default LaunchCard;
