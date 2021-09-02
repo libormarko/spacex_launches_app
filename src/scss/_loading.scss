@@ -1,10 +1,12 @@
 .loading-status {
     width: auto;
     margin-top: 10px;
+
     @include bp-min(md) {
         width: calc(100% - 250px);
         margin-top: 0px;
     }
+
     display: flex;
     justify-content: center;
     align-items: center;

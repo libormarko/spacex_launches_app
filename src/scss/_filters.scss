@@ -2,47 +2,55 @@
     width: auto;
     height: 40vh;
     overflow: scroll;
+
     @include bp-min(md) {
         width: 200px;
         height: fit-content;
     }
+
     background-color: #fff;
     padding: 16px;
+
     .filter__item {
         width: 33%;
+
         @include bp-min(md) {
             width: 50%;
         }
+
         display: flex;
         justify-content: center;
+
         label {
             margin: 10px 0px;
             display: inline-block;
             cursor: pointer;
             padding: 16px 25px;
             border-radius: 24px;
-            span {
-
-            }
         }
     }
+
     & &--headline {
         margin-top: 0px;
     }
+
     & &--subheadline {
         text-decoration: underline;
         width: 100%;
         text-align: center;
     }
+
     & &--years {
         display: flex;
         flex-wrap: wrap;
     }
+
     & &--launch {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     & &--landing {
         display: flex;
         flex-wrap: wrap;
