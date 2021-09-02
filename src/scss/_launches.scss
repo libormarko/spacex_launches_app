@@ -45,6 +45,10 @@
       h6 {
         margin-bottom: 5px;
       }
+      span {
+        display: block;
+        margin-left: 15px;
+      }
     }
     .item--container:not(:nth-child(3)) {
       display: flex;
