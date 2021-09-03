@@ -7,8 +7,8 @@ const LaunchCard = ({ missionPatch, missionName, missionId, launchYear, launchSu
         </div>
         <h5>{missionName}</h5>
         <div className="item--container">
-            <h6>Mission Id's:</h6>
-            <span>{missionId.length === 0 ? "no IDs available" : missionId.map((item, index) => <li key={index}>{item}</li>)}</span>
+            <h6>Mission ID's:</h6>
+            <span>{missionId.length === 0 ? "no ID's available" : missionId.map((item, index) => <li key={index}>{item}</li>)}</span>
         </div>
         <div className="item--container">
             <h6>Launch Year:</h6>
@@ -16,7 +16,7 @@ const LaunchCard = ({ missionPatch, missionName, missionId, launchYear, launchSu
         </div>
         <div className="item--container">
             <h6>Succesful Launch:</h6>
-            <span>{launchSuccess ? launchSuccess.toString() : 'false'}</span>
+            <span>{launchSuccess ? launchSuccess.toString() : "false"}</span>
         </div>
         <div className="item--container">
             <h6>Succesful Landing:</h6>

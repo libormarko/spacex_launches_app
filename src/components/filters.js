@@ -71,7 +71,7 @@ class Filters extends React.Component {
                     }
                 </div>
                 <div className="filters__container--landing">
-                    <h6 className="filters__container--subheadline">Succesful landing</h6>
+                    <h6 className="filters__container--subheadline">Succesful landing:</h6>
                     {
                         FILTERS_LANDING.map(item => (
                             <span
