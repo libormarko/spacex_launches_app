@@ -1,5 +1,6 @@
 # SpaceX Launch Program API Project
 This is a frontend React application, that works with SpaceX API data. An user has an option to filter data by different criterias, and see SpaceX launches in next step.
+You can also check the app running live on [heroku](https://spacexlaunchesapplm.herokuapp.com/).
 ## Technologies used
 * HTML5
 * SASS
