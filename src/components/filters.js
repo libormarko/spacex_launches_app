@@ -17,9 +17,9 @@ class Filters extends React.Component {
     render() {
         return (
             <div className="filters__container">
-                <h6 className="filters__container--headline">Filters:</h6>
-                <div className="filters__container--years">
-                    <h6 className="filters__container--subheadline">Launch Year:</h6>
+                <h6 className="filters__container-headline">Filters:</h6>
+                <div className="filters__container-years">
+                    <h6 className="filters__container-subheadline">Launch Year:</h6>
                     {
                         FILTERS_YEARS.map(item => (
                             <span
@@ -44,8 +44,8 @@ class Filters extends React.Component {
                         ))
                     }
                 </div>
-                <div className="filters__container--launch">
-                    <h6 className="filters__container--subheadline">Succesful launch:</h6>
+                <div className="filters__container-launch">
+                    <h6 className="filters__container-subheadline">Succesful launch:</h6>
                     {
                         FILTERS_LAUNCH.map(item => (
                             <span
@@ -70,8 +70,8 @@ class Filters extends React.Component {
                         ))
                     }
                 </div>
-                <div className="filters__container--landing">
-                    <h6 className="filters__container--subheadline">Succesful landing:</h6>
+                <div className="filters__container-landing">
+                    <h6 className="filters__container-subheadline">Succesful landing:</h6>
                     {
                         FILTERS_LANDING.map(item => (
                             <span

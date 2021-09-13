@@ -30,28 +30,28 @@
         }
     }
 
-    & &--headline {
+    & &-headline {
         margin-top: 0px;
     }
 
-    & &--subheadline {
+    & &-subheadline {
         text-decoration: underline;
         width: 100%;
         text-align: center;
     }
 
-    & &--years {
+    & &-years {
         display: flex;
         flex-wrap: wrap;
     }
 
-    & &--launch {
+    & &-launch {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    & &--landing {
+    & &-landing {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
